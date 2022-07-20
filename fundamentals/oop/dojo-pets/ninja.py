@@ -1,0 +1,32 @@
+from telnetlib import DO
+from dog import Dog
+
+
+class Ninja:
+    def __init__(self, first_name, last_name, treats, pet_food, pet):
+        super().__init__()
+        self.first_name = first_name
+        self.last_name = last_name
+        self.treats = treats
+        self.pet_food = pet_food
+        self.pet = pet
+
+    def walk(self):
+        self.pet.play()
+        return self
+
+    def feed(self):
+        self.pet.eat()
+        return self
+
+    def bathe(self):
+        self.pet.noise()
+        return self
+
+
+if __name__ == "__main__":
+
+    dog = Dog("Spike", "Dog", "fetch", 100, 65)
+    ninjach = Ninja("jona", "sedwik", "bubbly", "cookie", dog)
+
+    ninjach.feed().walk().bathe()
