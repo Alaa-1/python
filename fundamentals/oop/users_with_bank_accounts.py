@@ -63,3 +63,7 @@ class User:
     def transfer_money(from_account, to_account, amount):
         from_account.account.deposit(amount)
         to_account.account.withdraw(amount)
+
+#TODO
+#?SENSEI BONUS: Allow a user to have multiple accounts;
+#?update methods so the user has to specify which account they are withdrawing or depositing to
