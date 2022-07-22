@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style_root.css')}}">
+</head>
+
+<body>
+    <!-- display 8 by 8 checkerboard -->
+    <table class="chess-board">
+        <h1>*** checkerboard ***</h1>
+        {%for i in range(0,y):%}
+        <tr>
+            {%for j in range(0, x):%}
+            <td style="background-color: {% if (i+j)%2 ==0 %}{{ color1 }} {% else %} {{ color2 }} {% endif %} ;"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+
+</html>
