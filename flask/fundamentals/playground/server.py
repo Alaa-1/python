@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 @app.route("/play")
 def level_1():
-    return render_template("level_1.html")
+    return render_template("level_3.html", times=3, color="#9FC5F8")
 
 
 @app.route("/play/<times>")
 def level_2(times):
-    return render_template("level_2.html", times=int(times))
+    return render_template("level_3.html", times=int(times), color="#9FC5F8")
 
 
 @app.route("/play/<times>/<color>")
