@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <div class="counter">
+        <h1>Counter</h1>
+        <p>Visted {{ session['visited'] }} time(s)</p>
+        <p>The Counter value is {{ session['count'] }}</p>
+        <form action="/manual_increment" method="post">
+            <label for="text">Enter a number</label>
+            <input type="text" name="count_num">
+            <input type='submit' value='increment'>
+        </form>
+        <form action="/increment_2" method="post">
+            <input type="submit" value="+2">
+        </form>
+        <form action="/reset" method="post">
+            <input type="submit" value="Reset">
+
+        </form>
+
+    </div>
+</body>
+
+</html>
