@@ -14,15 +14,15 @@
 </head>
 
 <body>
-    <div class="containers">
-        <h1 class="form-name">Dojo Survey</h1>
-        <form action="/info" method="post">
-            <div class="form-group col-sm-2 ">
+    <div class=" bg-dark text-light p-5 rounded col-6 mx-auto">
+        <h1 class=" form-name">Dojo Survey</h1>
+        <form action="/info" method="post" class="col-6 mx-auto">
+            <div class="form-group ">
                 <label for="exampleFormControlInput1">Your Name: </label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
                     name="username">
             </div>
-            <div class="form-group col-sm-2">
+            <div class="form-group">
                 <label for="exampleFormControlSelect1">Dojo Location: </label>
                 <select class="form-control" id="exampleFormControlSelect1" name="location">
                     <option selected>Choose...</option>
@@ -42,7 +42,7 @@
                     <option>C#</option>
                 </select>
             </div>
-            <div class="form-group col-sm-2">
+            <div class="form-group">
                 <label for="exampleFormControlTextarea1">Comment (optional): </label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
             </div>
