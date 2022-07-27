@@ -1,0 +1,31 @@
+.info-container h1 {
+    text-decoration: underline;
+}
+
+.info-container {
+    margin: 30px;
+}
+
+#info-btn {
+    color: #fff;
+}
+
+.form-name {
+    text-align: center;
+    color: #F5B90F;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.containers {
+    margin: 30px;
+    background-color: #292A2D;
+
+
+}

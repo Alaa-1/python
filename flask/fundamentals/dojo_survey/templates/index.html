@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="containers">
+        <h1 class="form-name">Dojo Survey</h1>
+        <form action="/info" method="post">
+            <div class="form-group col-sm-2 ">
+                <label for="exampleFormControlInput1">Your Name: </label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                    name="username">
+            </div>
+            <div class="form-group col-sm-2">
+                <label for="exampleFormControlSelect1">Dojo Location: </label>
+                <select class="form-control" id="exampleFormControlSelect1" name="location">
+                    <option selected>Choose...</option>
+                    <option>Dallas</option>
+                    <option>Austin</option>
+                    <option>San Jose</option>
+                    <option>Houston</option>
+                    <option>San Antonio</option>
+                </select>
+                <label for="exampleFormControlSelect1">Favorite Language: </label>
+                <select class="form-control" id="exampleFormControlSelect1" name="language">
+                    <option selected>Choose...</option>
+                    <option>Python</option>
+                    <option>JavaScript</option>
+                    <option>Rust</option>
+                    <option>Go</option>
+                    <option>C#</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-2">
+                <label for="exampleFormControlTextarea1">Comment (optional): </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <!-- Bootstrap js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
